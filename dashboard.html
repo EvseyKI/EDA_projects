@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>explainerdashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+<div><H1>Model Explainer</H1></div><ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+    <button class="nav-link active" id="myTab0-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab0" role="tab"
+    aria-selected="true" aria-controls="myTab0">Feature Importances</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab1-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab1" role="tab"
+    aria-selected="false" aria-controls="myTab1">Regression Stats</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab2-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab2" role="tab"
+    aria-selected="false" aria-controls="myTab2">Individual Predictions</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab3-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab3" role="tab"
+    aria-selected="false" aria-controls="myTab3">What if...</button>
+</li>
+
+<li class="nav-item" role="presentation">
+    <button class="nav-link" id="myTab4-tab"
+    data-bs-toggle="tab" type="button" data-bs-target="#myTab4" role="tab"
+    aria-selected="false" aria-controls="myTab4">Feature Dependence</button>
+</li>
+
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+
+<div class="tab-pane active" id="myTab0"
+     role="tabpanel" aria-labelledby="myTab0-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Feature Importances</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="83949bf6-7b6b-4569-aea9-909121d9725d" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("83949bf6-7b6b-4569-aea9-909121d9725d")) {                    Plotly.newPlot(                        "83949bf6-7b6b-4569-aea9-909121d9725d",                        [{"hoverinfo":"text","orientation":"h","x":[0.10119947354173382,0.10578377826754613,0.18898375061415215,0.20916419671135408,0.22598027631083797,0.22967734587858005,0.2670886311956572,0.35085858580162005,0.4293559631551166,0.7588634446500205],"y":["10. Sex_M","9. Sex_F","8. Height","7. Sex_I","6. Viscera weight","5. Length","4. Diameter","3. Whole weight","2. Shucked weight","1. Shell weight"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted Rings\u003cbr\u003e(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":400,"margin":{"b":40,"l":98,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+<div></div>
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab1"
+     role="tabpanel" aria-labelledby="myTab1-tab"> <div></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Model Summary</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">metric</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mean-squared-error</td>
+      <td>7.095</td>
+    </tr>
+    <tr>
+      <td>root-mean-squared-error</td>
+      <td>2.664</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-error</td>
+      <td>1.534</td>
+    </tr>
+    <tr>
+      <td>mean-absolute-percentage-error</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <td>R-squared</td>
+      <td>0.596</td>
+    </tr>
+
+  </tbody>
+</table>
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Predicted vs Actual</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="c144054d-2fd2-4b31-a813-cad4235444df" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c144054d-2fd2-4b31-a813-cad4235444df")) {                    Plotly.newPlot(                        "c144054d-2fd2-4b31-a813-cad4235444df",                        [{"hoverinfo":"text","mode":"markers","name":"","text":["Index: 0\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 12.731","Index: 1\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.063","Index: 2\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 6.764","Index: 3\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 9.673","Index: 4\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 10.303","Index: 5\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 8.006","Index: 6\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.734","Index: 7\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.201","Index: 8\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 14.074","Index: 9\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.918","Index: 10\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.794","Index: 11\u003cbr\u003eObserved: 19.000\u003cbr\u003ePrediction: 15.017","Index: 12\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.133","Index: 13\u003cbr\u003eObserved: 12.000\u003cbr\u003ePrediction: 11.203","Index: 14\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 11.632","Index: 15\u003cbr\u003eObserved: 22.000\u003cbr\u003ePrediction: 15.327","Index: 16\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.010","Index: 17\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 9.230","Index: 18\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.130","Index: 19\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 7.986","Index: 20\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.730","Index: 21\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.615","Index: 22\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.277","Index: 23\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.644","Index: 24\u003cbr\u003eObserved: 27.000\u003cbr\u003ePrediction: 13.460","Index: 25\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.662","Index: 26\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.823","Index: 27\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 11.078","Index: 28\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 6.785","Index: 29\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 11.286","Index: 30\u003cbr\u003eObserved: 10.000\u003cbr\u003ePrediction: 10.723","Index: 31\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.125","Index: 32\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.439","Index: 33\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 11.082","Index: 34\u003cbr\u003eObserved: 6.000\u003cbr\u003ePrediction: 7.914","Index: 35\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 10.205","Index: 36\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 8.904","Index: 37\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.193","Index: 38\u003cbr\u003eObserved: 6.000\u003cbr\u003ePrediction: 6.411","Index: 39\u003cbr\u003eObserved: 4.000\u003cbr\u003ePrediction: 4.229","Index: 40\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.182","Index: 41\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 9.439","Index: 42\u003cbr\u003eObserved: 13.000\u003cbr\u003ePrediction: 12.983","Index: 43\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 6.479","Index: 44\u003cbr\u003eObserved: 10.000\u003cbr\u003ePrediction: 9.989","Index: 45\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 6.721","Index: 46\u003cbr\u003eObserved: 4.000\u003cbr\u003ePrediction: 4.260","Index: 47\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.237","Index: 48\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 11.267","Index: 49\u003cbr\u003eObserved: 12.000\u003cbr\u003ePrediction: 12.598"],"x":[15.0,7.0,11.0,11.0,9.0,9.0,11.0,8.0,14.0,9.0,7.0,19.0,11.0,12.0,15.0,22.0,9.0,7.0,9.0,8.0,7.0,7.0,7.0,8.0,27.0,11.0,9.0,9.0,7.0,15.0,10.0,9.0,9.0,14.0,6.0,14.0,8.0,11.0,6.0,4.0,8.0,11.0,13.0,7.0,10.0,8.0,4.0,7.0,11.0,12.0],"y":[12.731193797260728,8.06258315469248,6.7638638220861,9.672903173051132,10.302879384687245,8.0058958373496,10.73411292382137,9.200629486200565,14.074429814336574,9.91769418260312,7.794001872907689,15.017362341879211,10.133127278266569,11.202720849124804,11.632305896187553,15.326722711214952,9.010456524902974,9.229567664849014,9.13030447699045,7.986063620321484,7.7295929827150625,8.615121176325191,7.2769676077079355,9.644375316125705,13.460018684259577,10.66152683936326,9.82314998543857,11.077952088230088,6.7853146281527845,11.286392977402592,10.723377051504269,9.124824289568219,9.439253847533136,11.081716458847286,7.914054756042993,10.205147868770931,8.904150755525675,10.193205343706168,6.410737763096377,4.228832168431277,9.182028175194946,9.439112461343642,12.982877596516635,6.479349706409326,9.98898867424329,6.720582084807472,4.259975565635725,8.237069840598522,11.267065585735734,12.598252161566442],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"","x":[4.0,4.0,6.0,6.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,8.0,8.0,8.0,8.0,8.0,8.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,10.0,10.0,11.0,11.0,11.0,11.0,11.0,11.0,11.0,11.0,12.0,12.0,13.0,14.0,14.0,14.0,15.0,15.0,15.0,19.0,22.0,27.0],"y":[4.0,4.0,6.0,6.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,7.0,8.0,8.0,8.0,8.0,8.0,8.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,9.0,10.0,10.0,11.0,11.0,11.0,11.0,11.0,11.0,11.0,11.0,12.0,12.0,13.0,14.0,14.0,14.0,15.0,15.0,15.0,19.0,22.0,27.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Predicted Rings vs Observed Rings"},"xaxis":{"title":{"text":"Observed Rings"}},"yaxis":{"title":{"text":"Predicted Rings"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Residuals</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="911d1d2d-d374-42fb-a913-249f4998c7d3" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("911d1d2d-d374-42fb-a913-249f4998c7d3")) {                    Plotly.newPlot(                        "911d1d2d-d374-42fb-a913-249f4998c7d3",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 0\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 12.731\u003cbr\u003eResidual: 2.269","Index: 1\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.063\u003cbr\u003eResidual: -1.063","Index: 2\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 6.764\u003cbr\u003eResidual: 4.236","Index: 3\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 9.673\u003cbr\u003eResidual: 1.327","Index: 4\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 10.303\u003cbr\u003eResidual: -1.303","Index: 5\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 8.006\u003cbr\u003eResidual: 0.994","Index: 6\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.734\u003cbr\u003eResidual: 0.266","Index: 7\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.201\u003cbr\u003eResidual: -1.201","Index: 8\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 14.074\u003cbr\u003eResidual: -0.074","Index: 9\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.918\u003cbr\u003eResidual: -0.918","Index: 10\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.794\u003cbr\u003eResidual: -0.794","Index: 11\u003cbr\u003eObserved: 19.000\u003cbr\u003ePrediction: 15.017\u003cbr\u003eResidual: 3.983","Index: 12\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.133\u003cbr\u003eResidual: 0.867","Index: 13\u003cbr\u003eObserved: 12.000\u003cbr\u003ePrediction: 11.203\u003cbr\u003eResidual: 0.797","Index: 14\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 11.632\u003cbr\u003eResidual: 3.368","Index: 15\u003cbr\u003eObserved: 22.000\u003cbr\u003ePrediction: 15.327\u003cbr\u003eResidual: 6.673","Index: 16\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.010\u003cbr\u003eResidual: -0.010","Index: 17\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 9.230\u003cbr\u003eResidual: -2.230","Index: 18\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.130\u003cbr\u003eResidual: -0.130","Index: 19\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 7.986\u003cbr\u003eResidual: 0.014","Index: 20\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.730\u003cbr\u003eResidual: -0.730","Index: 21\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.615\u003cbr\u003eResidual: -1.615","Index: 22\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 7.277\u003cbr\u003eResidual: -0.277","Index: 23\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.644\u003cbr\u003eResidual: -1.644","Index: 24\u003cbr\u003eObserved: 27.000\u003cbr\u003ePrediction: 13.460\u003cbr\u003eResidual: 13.540","Index: 25\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.662\u003cbr\u003eResidual: 0.338","Index: 26\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.823\u003cbr\u003eResidual: -0.823","Index: 27\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 11.078\u003cbr\u003eResidual: -2.078","Index: 28\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 6.785\u003cbr\u003eResidual: 0.215","Index: 29\u003cbr\u003eObserved: 15.000\u003cbr\u003ePrediction: 11.286\u003cbr\u003eResidual: 3.714","Index: 30\u003cbr\u003eObserved: 10.000\u003cbr\u003ePrediction: 10.723\u003cbr\u003eResidual: -0.723","Index: 31\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.125\u003cbr\u003eResidual: -0.125","Index: 32\u003cbr\u003eObserved: 9.000\u003cbr\u003ePrediction: 9.439\u003cbr\u003eResidual: -0.439","Index: 33\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 11.082\u003cbr\u003eResidual: 2.918","Index: 34\u003cbr\u003eObserved: 6.000\u003cbr\u003ePrediction: 7.914\u003cbr\u003eResidual: -1.914","Index: 35\u003cbr\u003eObserved: 14.000\u003cbr\u003ePrediction: 10.205\u003cbr\u003eResidual: 3.795","Index: 36\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 8.904\u003cbr\u003eResidual: -0.904","Index: 37\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 10.193\u003cbr\u003eResidual: 0.807","Index: 38\u003cbr\u003eObserved: 6.000\u003cbr\u003ePrediction: 6.411\u003cbr\u003eResidual: -0.411","Index: 39\u003cbr\u003eObserved: 4.000\u003cbr\u003ePrediction: 4.229\u003cbr\u003eResidual: -0.229","Index: 40\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 9.182\u003cbr\u003eResidual: -1.182","Index: 41\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 9.439\u003cbr\u003eResidual: 1.561","Index: 42\u003cbr\u003eObserved: 13.000\u003cbr\u003ePrediction: 12.983\u003cbr\u003eResidual: 0.017","Index: 43\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 6.479\u003cbr\u003eResidual: 0.521","Index: 44\u003cbr\u003eObserved: 10.000\u003cbr\u003ePrediction: 9.989\u003cbr\u003eResidual: 0.011","Index: 45\u003cbr\u003eObserved: 8.000\u003cbr\u003ePrediction: 6.721\u003cbr\u003eResidual: 1.279","Index: 46\u003cbr\u003eObserved: 4.000\u003cbr\u003ePrediction: 4.260\u003cbr\u003eResidual: -0.260","Index: 47\u003cbr\u003eObserved: 7.000\u003cbr\u003ePrediction: 8.237\u003cbr\u003eResidual: -1.237","Index: 48\u003cbr\u003eObserved: 11.000\u003cbr\u003ePrediction: 11.267\u003cbr\u003eResidual: -0.267","Index: 49\u003cbr\u003eObserved: 12.000\u003cbr\u003ePrediction: 12.598\u003cbr\u003eResidual: -0.598"],"x":[12.731193797260728,8.06258315469248,6.7638638220861,9.672903173051132,10.302879384687245,8.0058958373496,10.73411292382137,9.200629486200565,14.074429814336574,9.91769418260312,7.794001872907689,15.017362341879211,10.133127278266569,11.202720849124804,11.632305896187553,15.326722711214952,9.010456524902974,9.229567664849014,9.13030447699045,7.986063620321484,7.7295929827150625,8.615121176325191,7.2769676077079355,9.644375316125705,13.460018684259577,10.66152683936326,9.82314998543857,11.077952088230088,6.7853146281527845,11.286392977402592,10.723377051504269,9.124824289568219,9.439253847533136,11.081716458847286,7.914054756042993,10.205147868770931,8.904150755525675,10.193205343706168,6.410737763096377,4.228832168431277,9.182028175194946,9.439112461343642,12.982877596516635,6.479349706409326,9.98898867424329,6.720582084807472,4.259975565635725,8.237069840598522,11.267065585735734,12.598252161566442],"y":[2.268806202739272,-1.0625831546924793,4.2361361779139,1.3270968269488677,-1.3028793846872446,0.9941041626503999,0.2658870761786307,-1.2006294862005653,-0.07442981433657359,-0.9176941826031193,-0.794001872907689,3.9826376581207885,0.8668727217334311,0.7972791508751964,3.367694103812447,6.673277288785048,-0.010456524902973996,-2.2295676648490144,-0.13030447699044956,0.013936379678516353,-0.7295929827150625,-1.6151211763251911,-0.2769676077079355,-1.6443753161257053,13.539981315740423,0.33847316063673993,-0.8231499854385707,-2.077952088230088,0.21468537184721548,3.713607022597408,-0.7233770515042686,-0.12482428956821856,-0.439253847533136,2.9182835411527144,-1.9140547560429928,3.794852131229069,-0.9041507555256754,0.8067946562938317,-0.41073776309637733,-0.22883216843127663,-1.1820281751949455,1.5608875386563579,0.01712240348336458,0.5206502935906743,0.011011325756710377,1.2794179151925276,-0.25997556563572477,-1.2370698405985223,-0.26706558573573425,-0.5982521615664425],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"","x":[12.731193797260728,8.06258315469248,6.7638638220861,9.672903173051132,10.302879384687245,8.0058958373496,10.73411292382137,9.200629486200565,14.074429814336574,9.91769418260312,7.794001872907689,15.017362341879211,10.133127278266569,11.202720849124804,11.632305896187553,15.326722711214952,9.010456524902974,9.229567664849014,9.13030447699045,7.986063620321484,7.7295929827150625,8.615121176325191,7.2769676077079355,9.644375316125705,13.460018684259577,10.66152683936326,9.82314998543857,11.077952088230088,6.7853146281527845,11.286392977402592,10.723377051504269,9.124824289568219,9.439253847533136,11.081716458847286,7.914054756042993,10.205147868770931,8.904150755525675,10.193205343706168,6.410737763096377,4.228832168431277,9.182028175194946,9.439112461343642,12.982877596516635,6.479349706409326,9.98898867424329,6.720582084807472,4.259975565635725,8.237069840598522,11.267065585735734,12.598252161566442],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs predicted Rings"},"xaxis":{"title":{"text":""}},"yaxis":{"title":{"text":"residuals (y-preds)"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Plot vs feature</h3><h6 class="card-subtitle">Are predictions and residuals correlated with features?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="bb17061b-c610-4982-8113-a69370cbcb2c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("bb17061b-c610-4982-8113-a69370cbcb2c")) {                    Plotly.newPlot(                        "bb17061b-c610-4982-8113-a69370cbcb2c",                        [{"hoverinfo":"text","mode":"markers","name":"residuals (y-preds)","text":["Index: 0\u003cbr\u003eActual: 15.000\u003cbr\u003ePrediction: 12.731\u003cbr\u003eResidual: 2.269","Index: 1\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 8.063\u003cbr\u003eResidual: -1.063","Index: 2\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 6.764\u003cbr\u003eResidual: 4.236","Index: 3\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 9.673\u003cbr\u003eResidual: 1.327","Index: 4\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 10.303\u003cbr\u003eResidual: -1.303","Index: 5\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 8.006\u003cbr\u003eResidual: 0.994","Index: 6\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 10.734\u003cbr\u003eResidual: 0.266","Index: 7\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 9.201\u003cbr\u003eResidual: -1.201","Index: 8\u003cbr\u003eActual: 14.000\u003cbr\u003ePrediction: 14.074\u003cbr\u003eResidual: -0.074","Index: 9\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.918\u003cbr\u003eResidual: -0.918","Index: 10\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 7.794\u003cbr\u003eResidual: -0.794","Index: 11\u003cbr\u003eActual: 19.000\u003cbr\u003ePrediction: 15.017\u003cbr\u003eResidual: 3.983","Index: 12\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 10.133\u003cbr\u003eResidual: 0.867","Index: 13\u003cbr\u003eActual: 12.000\u003cbr\u003ePrediction: 11.203\u003cbr\u003eResidual: 0.797","Index: 14\u003cbr\u003eActual: 15.000\u003cbr\u003ePrediction: 11.632\u003cbr\u003eResidual: 3.368","Index: 15\u003cbr\u003eActual: 22.000\u003cbr\u003ePrediction: 15.327\u003cbr\u003eResidual: 6.673","Index: 16\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.010\u003cbr\u003eResidual: -0.010","Index: 17\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 9.230\u003cbr\u003eResidual: -2.230","Index: 18\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.130\u003cbr\u003eResidual: -0.130","Index: 19\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 7.986\u003cbr\u003eResidual: 0.014","Index: 20\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 7.730\u003cbr\u003eResidual: -0.730","Index: 21\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 8.615\u003cbr\u003eResidual: -1.615","Index: 22\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 7.277\u003cbr\u003eResidual: -0.277","Index: 23\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 9.644\u003cbr\u003eResidual: -1.644","Index: 24\u003cbr\u003eActual: 27.000\u003cbr\u003ePrediction: 13.460\u003cbr\u003eResidual: 13.540","Index: 25\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 10.662\u003cbr\u003eResidual: 0.338","Index: 26\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.823\u003cbr\u003eResidual: -0.823","Index: 27\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 11.078\u003cbr\u003eResidual: -2.078","Index: 28\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 6.785\u003cbr\u003eResidual: 0.215","Index: 29\u003cbr\u003eActual: 15.000\u003cbr\u003ePrediction: 11.286\u003cbr\u003eResidual: 3.714","Index: 30\u003cbr\u003eActual: 10.000\u003cbr\u003ePrediction: 10.723\u003cbr\u003eResidual: -0.723","Index: 31\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.125\u003cbr\u003eResidual: -0.125","Index: 32\u003cbr\u003eActual: 9.000\u003cbr\u003ePrediction: 9.439\u003cbr\u003eResidual: -0.439","Index: 33\u003cbr\u003eActual: 14.000\u003cbr\u003ePrediction: 11.082\u003cbr\u003eResidual: 2.918","Index: 34\u003cbr\u003eActual: 6.000\u003cbr\u003ePrediction: 7.914\u003cbr\u003eResidual: -1.914","Index: 35\u003cbr\u003eActual: 14.000\u003cbr\u003ePrediction: 10.205\u003cbr\u003eResidual: 3.795","Index: 36\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 8.904\u003cbr\u003eResidual: -0.904","Index: 37\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 10.193\u003cbr\u003eResidual: 0.807","Index: 38\u003cbr\u003eActual: 6.000\u003cbr\u003ePrediction: 6.411\u003cbr\u003eResidual: -0.411","Index: 39\u003cbr\u003eActual: 4.000\u003cbr\u003ePrediction: 4.229\u003cbr\u003eResidual: -0.229","Index: 40\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 9.182\u003cbr\u003eResidual: -1.182","Index: 41\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 9.439\u003cbr\u003eResidual: 1.561","Index: 42\u003cbr\u003eActual: 13.000\u003cbr\u003ePrediction: 12.983\u003cbr\u003eResidual: 0.017","Index: 43\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 6.479\u003cbr\u003eResidual: 0.521","Index: 44\u003cbr\u003eActual: 10.000\u003cbr\u003ePrediction: 9.989\u003cbr\u003eResidual: 0.011","Index: 45\u003cbr\u003eActual: 8.000\u003cbr\u003ePrediction: 6.721\u003cbr\u003eResidual: 1.279","Index: 46\u003cbr\u003eActual: 4.000\u003cbr\u003ePrediction: 4.260\u003cbr\u003eResidual: -0.260","Index: 47\u003cbr\u003eActual: 7.000\u003cbr\u003ePrediction: 8.237\u003cbr\u003eResidual: -1.237","Index: 48\u003cbr\u003eActual: 11.000\u003cbr\u003ePrediction: 11.267\u003cbr\u003eResidual: -0.267","Index: 49\u003cbr\u003eActual: 12.000\u003cbr\u003ePrediction: 12.598\u003cbr\u003eResidual: -0.598"],"x":[0.33233682112605883,0.046337817638266075,0.06826108619830595,0.21275535625311415,0.2914798206278027,0.06826108619830595,0.43697060288988543,0.16890881913303443,0.44195316392625816,0.3572496263079223,0.13054309915296466,0.3522670652715496,0.14798206278026907,0.3971101145989039,0.4668659691081216,0.5465869456900848,0.08819133034379673,0.09317389138016943,0.23268560039860492,0.07324364723467863,0.11858495266567018,0.1315396113602392,0.10762331838565024,0.23916292974588943,0.8804185351270555,0.35027404085700053,0.35027404085700053,0.15794718485301448,0.07125062282012956,0.3223716990533134,0.3552566018933732,0.21425012456402595,0.1280518186347783,0.20926756352765324,0.1180866965620329,0.27254608868958646,0.1559541604384654,0.3423019431988042,0.05231689088191331,0.006975585450921775,0.22919780767314404,0.10812157448928751,0.29247633283507724,0.05979073243647235,0.17488789237668165,0.0852017937219731,0.007972097658196314,0.23268560039860492,0.476831091180867,0.19780767314399605],"y":[2.268806202739272,-1.0625831546924793,4.2361361779139,1.3270968269488677,-1.3028793846872446,0.9941041626503999,0.2658870761786307,-1.2006294862005653,-0.07442981433657359,-0.9176941826031193,-0.794001872907689,3.9826376581207885,0.8668727217334311,0.7972791508751964,3.367694103812447,6.673277288785048,-0.010456524902973996,-2.2295676648490144,-0.13030447699044956,0.013936379678516353,-0.7295929827150625,-1.6151211763251911,-0.2769676077079355,-1.6443753161257053,13.539981315740423,0.33847316063673993,-0.8231499854385707,-2.077952088230088,0.21468537184721548,3.713607022597408,-0.7233770515042686,-0.12482428956821856,-0.439253847533136,2.9182835411527144,-1.9140547560429928,3.794852131229069,-0.9041507555256754,0.8067946562938317,-0.41073776309637733,-0.22883216843127663,-1.1820281751949455,1.5608875386563579,0.01712240348336458,0.5206502935906743,0.011011325756710377,1.2794179151925276,-0.25997556563572477,-1.2370698405985223,-0.26706558573573425,-0.5982521615664425],"type":"scattergl"},{"hoverinfo":"none","mode":"lines","name":"Shell weight","x":[0.33233682112605883,0.046337817638266075,0.06826108619830595,0.21275535625311415,0.2914798206278027,0.06826108619830595,0.43697060288988543,0.16890881913303443,0.44195316392625816,0.3572496263079223,0.13054309915296466,0.3522670652715496,0.14798206278026907,0.3971101145989039,0.4668659691081216,0.5465869456900848,0.08819133034379673,0.09317389138016943,0.23268560039860492,0.07324364723467863,0.11858495266567018,0.1315396113602392,0.10762331838565024,0.23916292974588943,0.8804185351270555,0.35027404085700053,0.35027404085700053,0.15794718485301448,0.07125062282012956,0.3223716990533134,0.3552566018933732,0.21425012456402595,0.1280518186347783,0.20926756352765324,0.1180866965620329,0.27254608868958646,0.1559541604384654,0.3423019431988042,0.05231689088191331,0.006975585450921775,0.22919780767314404,0.10812157448928751,0.29247633283507724,0.05979073243647235,0.17488789237668165,0.0852017937219731,0.007972097658196314,0.23268560039860492,0.476831091180867,0.19780767314399605],"y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"type":"scattergl"}],                        {"hovermode":"closest","plot_bgcolor":"#fff","title":{"text":"Residuals vs Shell weight"},"xaxis":{"title":{"text":"Shell weight value"}},"yaxis":{"title":{"text":"residuals (y-preds)"},"range":[-2.2295676648490144,13.539981315740423]},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab2"
+     role="tabpanel" aria-labelledby="myTab2-tab"> <div><H1>Individual Predictions</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+no index selected
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="1297abe5-9508-48dd-a2af-d566d322028a" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("1297abe5-9508-48dd-a2af-d566d322028a")) {                    Plotly.newPlot(                        "1297abe5-9508-48dd-a2af-d566d322028a",                        [{"line":{"color":"grey","width":4},"mode":"lines+markers","name":"average prediction \u003cbr\u003efor different values of \u003cbr\u003eShell weight","x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.87,8.91,8.98,9.14,9.32,9.44,9.7,9.96,10.34,11.1],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.992582180933319,9.01922344243027,9.22759836161926,10.000359295263284,10.050286303024226,10.023686919615601,10.099485543022526,10.090971303309184,10.084949829528366,10.069332058469051],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.773498798195938,9.772724584283353,9.772354315875223,9.771748439467704,9.771167245595814,9.772182094827315,10.182693771873137,11.533232462033444,13.179057993315027,14.147599221227534],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.101693439168852,10.099907311247978,10.098995268087991,10.097327582179439,10.095041538420348,10.385332708305663,11.625103335450671,13.248796455105104,14.102894657123187,14.621827110857376],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[4.228832168431277,4.26115266103905,4.263175319326709,4.265454858653242,4.273407822855864,4.297636524197299,4.299708270510483,4.294314632417979,4.2908667524494835,4.283189103295668],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.11926083160725,9.12147617593547,9.122665831367458,9.124764745878133,9.192701062798774,9.701294146737103,10.374580783406456,10.37981435482134,10.382341249196077,10.38659640754315],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.723446666896672,9.749947643826538,9.768769450421331,9.81985293383632,11.162448692092777,12.24620576286533,12.561767020043263,11.961975500213393,11.99603070981165,12.477269394831733],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.000645293614859,10.00050218987585,10.000405508861316,10.000191334851188,9.999826368231377,9.897089544106631,10.53414236835233,11.997530226352445,14.194593450203545,16.38722465485089],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.054809371051475,8.087907263306937,7.971213914520577,8.076452223471692,8.074438063302408,8.078955512728427,8.079530951727577,8.076743020966228,8.074420155393787,8.066446048486],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.802114518986453,10.807577598617831,10.810467172210618,10.815927984365938,10.823796686940657,10.806333359166377,11.001328018593318,10.889765852111637,11.325106323934893,14.1552087795632],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.456039955618529,9.44534471875705,9.439490574277846,9.425416927997253,9.357252884457798,9.313167586140798,9.822823218627912,10.920876834109288,12.596829761846125,13.53030282568247],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.927620490078281,8.920112436421347,8.914828537337579,10.146181093766879,11.013520329813591,11.15246924113844,11.05200668562511,11.024543514328299,11.007560996557558,10.970631183179743],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.343210519022119,10.345230852303853,10.346277233494055,10.348215864011197,10.350926849966717,10.33720298007577,10.46848173694821,10.70984200680281,11.12501439319824,13.813274194777874],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.588231503244751,9.581463023325488,9.577550875503878,9.473303285969777,9.462493931233691,9.528062592558301,10.03419474044761,10.894056136705101,10.912493283149821,12.711545600905525],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.834333978225903,8.960795342773679,9.287797182172236,9.220581596220347,9.155790982381557,9.135886059858182,9.127528582360721,9.124643567303227,9.122424229302256,9.116405099381653],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.4764400889008416,6.44880217947605,6.979336324359099,7.641476188597653,7.633085426888025,7.56467709144705,7.3077925236671755,7.315715059850621,7.320126653290963,7.328458377514237],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.927223118492119,8.93886053148763,8.945920745092181,8.942718348432733,8.919808639592642,9.014106604223262,9.941781490842336,12.15093908556187,14.034623686968223,15.053529356916211],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.770131000180811,9.767720141521519,9.766287337646435,9.763217952912601,9.757625468862077,9.605257947958725,10.062686160224674,10.116543188001952,10.099898573495135,10.07123886760313],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.66026921735758,10.6446752909482,10.6360514618767,10.62369089427359,10.75136221605236,10.711938703063035,12.530465078116153,14.212947563595309,15.320774795029278,15.403808414717437],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.363771830874404,8.35211248999764,8.34381859981403,8.181350156541763,8.888462614935031,8.933891977294547,9.194258976538423,9.191241199715064,9.187603291112946,9.176448062289554],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.987815959150602,9.985718341722322,9.984669156543024,9.982786482345615,9.98027504893522,9.975393620274955,9.963407908727735,9.852401870222906,11.759121075249977,14.006976085178682],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.933266406888652,6.9260333774624385,6.984839235338476,7.928563631247787,8.862215291920391,8.368786803502807,8.352189220981108,8.413982487626742,8.448141209006817,8.514161383614402],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.296434261346159,8.28112849558787,8.27075637144716,8.53571558821428,9.297244354591825,10.940322142731075,11.032133927655408,11.2417919719265,11.250010958127863,11.266685062024658],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.551684804636906,7.550340219126302,7.549591242334635,7.743603206904419,8.19939332376085,8.183299037439728,8.539814107969027,8.54353424672117,8.545937759775144,8.551435614498306],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.452548414327233,6.737377475177772,7.0532590614626525,7.1297632714557215,7.058656801633911,7.022303891634377,7.087427691918887,7.110637019988803,7.123698744122031,7.149668774307266],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.590385640521731,10.596047107001937,10.598848279361539,10.60382663861795,10.610377602025526,10.618104813115776,10.48700586427417,10.149954639169836,10.840958417208737,15.374817378414889],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.387036112951597,9.386609757589301,9.386381014330746,9.385942006338063,9.385292742249385,9.330794212488241,10.26216655600128,11.029590459582586,12.315048728668815,13.045489587081885],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.548613227863208,6.7638638220861,7.138053757174902,7.150735533898249,7.123533662540884,7.033660740187771,7.094906176828544,7.116485238001647,7.128466227559858,7.151814485158385],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.194638537324506,9.205133646445264,9.211936338592494,9.228378418920727,9.936457583890263,11.028542332646037,10.743853586019888,11.337979767443384,11.305564918157824,11.251359172411526],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.77241500667605,9.771560893081261,9.771140328005318,9.77039630443116,9.769424133449538,9.767596168663113,9.763404422191584,9.82314998543857,11.477943152846779,14.507849756546657],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.605585493311085,6.8675905375234105,7.537918229054226,7.807650212158055,7.488287591392752,7.193886508951938,7.244472826825494,7.26985657792522,7.284488686100702,7.313986327787471],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.687879291909411,10.690418803819178,10.691606916163494,10.693615650311566,10.696074661325488,10.688386001836296,10.530823327606289,10.531150079141844,10.636916148857392,14.414149124959362],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.265522142094536,9.281527759784542,9.291857247868972,9.439254752330406,9.544636854541418,10.002735588304756,9.979744018915035,9.973683982738132,9.969143355437065,9.95649736163603],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[4.265731568604531,4.281586846664731,4.28138355950305,4.281011478752116,4.388902823530356,4.419589035047181,4.471612456460142,4.463745864101494,4.459191879155468,4.45014190575903],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.395206151167608,7.396976115625383,7.397614916215478,7.991919668274367,9.279149532859938,9.112771774306298,8.832512140622113,8.805412890658006,8.788254251052454,8.750009913129743],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.095927477090795,9.057057594075626,9.394687967248933,9.894084221735417,10.105839431983156,10.130844718616297,10.238259353987235,10.247582919929279,10.253621964623324,10.267442950897196],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.671042778025228,10.6716448956008,10.671941803906051,10.672473258438007,10.673191513568915,10.663716448601749,10.607141026443571,10.66152683936326,10.921491667538302,12.61848570855424],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[8.974995155151088,8.958507842438802,8.989840901608918,9.547780287262736,9.653616816789373,9.580059785446311,9.595919625947985,9.62740194875184,9.646754775575166,9.689747246197244],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.90479503873898,9.907914272378083,9.909326055135317,9.91118184095332,11.719184288772633,13.013374830004194,13.660803051602288,13.168638936928073,13.24806313659361,13.65448903091338],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.170731345707011,7.2176114669109745,7.268796750876655,8.18868061078293,8.33681088144213,7.992003076945161,7.833011804300442,7.86873127020538,7.887769529097863,7.923164754653165],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.866067861704378,10.876297941012139,10.88105658758926,10.889061399759312,10.898789956170399,11.067347891025925,11.123238167027502,10.856089924041948,10.572780297892539,13.460018684259577],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[11.186444217916621,11.190754658567373,11.193040611027227,11.150013592597414,11.281942656413829,11.745948531997518,13.611488996202203,15.009186752982435,15.48790195860048,15.983581541409263],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[9.144807901975172,9.139047215769944,9.13583252441754,9.129426610272004,9.073277097250878,9.13101630914673,9.501432043964797,9.480809595505654,9.470360398918425,9.453408803010058],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.588898232051823,8.0058958373496,8.073455123010987,8.045213484675426,7.962531730006902,7.78671632570098,7.813290755717805,7.8641335732925635,7.888354797003447,7.926711884443447],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.80807185906557,7.93412386413363,8.34524571500844,8.28154985125466,8.072625144224807,8.066536026202069,8.054849788986527,8.072229604154682,8.082030842540709,8.100560646018467],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[10.282011772660795,10.294541149166495,10.30111264390344,10.313453999960913,10.439054038984473,11.407646351664708,12.455887121533122,12.827420374837223,13.081245259452563,13.966371120891624],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[6.40269108086784,6.709964487852424,7.010225250388193,7.03412771289465,6.947239271891222,6.73988969864762,6.744188166336537,6.749717649298179,6.753875421190028,6.765746989697535],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[7.032479290965377,7.012899971383815,7.042789331266365,8.044593808010331,7.866754587734313,7.507692573036817,7.580064766363826,7.681053516397637,7.725841544065149,7.796873653835304],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[11.106673933341913,11.106269044506291,11.106086280563742,11.105786334415841,11.105433703430423,11.104868424536885,11.103909013250018,11.102627184277726,11.104021431232736,12.91992333551993],"type":"scatter"},{"hoverinfo":"skip","line":{"color":"grey"},"mode":"lines","opacity":0.1,"showlegend":false,"x":[0.006975585450921775,0.06826108619830595,0.09262027348723913,0.12888224547417373,0.1664729004041411,0.21757183192160778,0.2851685766483971,0.35027404085700053,0.41925483031611566,0.8804185351270555],"y":[12.26179860581193,12.260093430097017,12.259309912580292,12.258005539034118,12.26005127144026,12.487284510732445,12.725764557515927,12.875309109893838,14.853613545500284,15.9391596268154],"type":"scatter"}],                        {"plot_bgcolor":"#fff","title":{"text":"pdp plot for Shell weight"},"xaxis":{"title":{"text":"Shell weight"}},"yaxis":{"title":{"text":"Predicted Rings"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"showlegend":false,"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>no index selected</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+<div class="tab-pane " id="myTab3"
+     role="tabpanel" aria-labelledby="myTab3-tab"> <div><div><H1>What if...</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Select Index</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected index: <b>None</b>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Prediction</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Feature Input</h3><h6 class="card-subtitle">Adjust the feature values to change the prediction</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+Selected: <b>None</b>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="Shell weight">Shell weight</label>
+    <input id="Shell weight" type="text" value="None" name="Shell weight" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Length">Length</label>
+    <input id="Length" type="text" value="None" name="Length" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Sex_F">Sex_F</label>
+    <input id="Sex_F" type="text" value="None" name="Sex_F" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="Shucked weight">Shucked weight</label>
+    <input id="Shucked weight" type="text" value="None" name="Shucked weight" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Viscera weight">Viscera weight</label>
+    <input id="Viscera weight" type="text" value="None" name="Viscera weight" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Sex_M">Sex_M</label>
+    <input id="Sex_M" type="text" value="None" name="Sex_M" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="Whole weight">Whole weight</label>
+    <input id="Whole weight" type="text" value="None" name="Whole weight" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Sex_I">Sex_I</label>
+    <input id="Sex_I" type="text" value="None" name="Sex_I" disabled>
+</div>
+    
+</div>
+        
+<div class="col">
+
+<div style="display:flex;flex-direction:column;">
+    <label for="Diameter">Diameter</label>
+    <input id="Diameter" type="text" value="None" name="Diameter" disabled>
+</div>
+    
+<div style="display:flex;flex-direction:column;">
+    <label for="Height">Height</label>
+    <input id="Height" type="text" value="None" name="Height" disabled>
+</div>
+    
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Plot</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Partial Dependence Plot</h3></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+        </div><div>
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-1 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Contributions Table</h3><h6 class="card-subtitle">How has each feature contributed to the prediction?</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>input data incorrect</div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="tab-pane " id="myTab4"
+     role="tabpanel" aria-labelledby="myTab4-tab"> <div><H1>Feature Dependence</H1></div>
+<div>
+    <div>
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="row row-cols-2 g-4" style="margin-top: 20px;">
+    
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Summary</h3><h6 class="card-subtitle">Ordering features by shap value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="dbdfd740-4d3d-40b7-af09-f6321c0e6ec4" class="plotly-graph-div" style="height:400px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("dbdfd740-4d3d-40b7-af09-f6321c0e6ec4")) {                    Plotly.newPlot(                        "dbdfd740-4d3d-40b7-af09-f6321c0e6ec4",                        [{"hoverinfo":"text","orientation":"h","x":[0.10119947354173382,0.10578377826754613,0.18898375061415215,0.20916419671135408,0.22598027631083797,0.22967734587858005,0.2670886311956572,0.35085858580162005,0.4293559631551166,0.7588634446500205],"y":["10. Sex_M","9. Sex_F","8. Height","7. Sex_I","6. Viscera weight","5. Length","4. Diameter","3. Whole weight","2. Shucked weight","1. Shell weight"],"type":"bar"}],                        {"plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Average impact on predicted Rings\u003cbr\u003e(mean absolute SHAP value)"},"template":{"data":{"scatter":[{"type":"scatter"}]}},"yaxis":{"automargin":true},"xaxis":{"automargin":true,"title":{"text":""}},"height":400,"margin":{"b":40,"l":98,"pad":4,"r":40,"t":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+<div class="col">
+
+<div class="card h-100" >
+  <div class="card-header"><h3 class="card-title">Shap Dependence</h3><h6 class="card-subtitle">Relationship between feature value and SHAP value</h6></div>
+  <div class="card-body">
+    <div class="w-100">
+    
+<div class="row" style="margin-top: 20px;">
+    
+<div class="col">
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="3652114b-5e77-4b65-98ba-a16279156aec" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3652114b-5e77-4b65-98ba-a16279156aec")) {                    Plotly.newPlot(                        "3652114b-5e77-4b65-98ba-a16279156aec",                        [{"hoverinfo":"text","marker":{"color":[0.21923335574983188,0.03463349024882313,0.06018829858776059,0.21620712844653667,0.32616005379959645,0.05379959650302623,0.5574983187626092,0.19737726967047747,0.31002017484868866,0.40181573638197715,0.18695359784801616,0.1886348352387357,0.14828513786146605,0.45090786819098855,0.46570275722932075,0.3043039677202421,0.08069939475453934,0.08238063214525891,0.07834566240753195,0.05413584398117014,0.11768661735036987,0.18829858776059183,0.10524546065904507,0.35675857431069263,0.5060524546065904,0.4455279085406859,0.4078681909885676,0.12441156691324814,0.06321452589105582,0.2962340282447882,0.42434431741761935,0.2074646940147949,0.09078681909885677,0.13550773369199734,0.16139878950907868,0.26227303295225285,0.11432414256893075,0.37121721587088097,0.05245460659045057,0.0057162071284465365,0.2952252858103564,0.1160053799596503,0.22932078009414933,0.06624075319435105,0.19401479488903833,0.09213180901143243,0.008406186953597848,0.1304640215198386,0.6809011432414257,0.14290517821116341],"colorbar":{"title":{"text":"Shucked weight"}},"colorscale":[[0.0,"rgb(0,0,255)"],[1.0,"rgb(255,0,0)"]],"opacity":0.6,"showscale":true,"size":7},"mode":"markers","text":["None=0\u003cbr\u003eShell weight=0.33233682112605883\u003cbr\u003eShucked weight=0.21923335574983188\u003cbr\u003eSHAP=1.070","None=1\u003cbr\u003eShell weight=0.046337817638266075\u003cbr\u003eShucked weight=0.03463349024882313\u003cbr\u003eSHAP=-0.908","None=2\u003cbr\u003eShell weight=0.06826108619830595\u003cbr\u003eShucked weight=0.06018829858776059\u003cbr\u003eSHAP=-0.770","None=3\u003cbr\u003eShell weight=0.21275535625311415\u003cbr\u003eShucked weight=0.21620712844653667\u003cbr\u003eSHAP=-0.235","None=4\u003cbr\u003eShell weight=0.2914798206278027\u003cbr\u003eShucked weight=0.32616005379959645\u003cbr\u003eSHAP=0.273","None=5\u003cbr\u003eShell weight=0.06826108619830595\u003cbr\u003eShucked weight=0.05379959650302623\u003cbr\u003eSHAP=-0.709","None=6\u003cbr\u003eShell weight=0.43697060288988543\u003cbr\u003eShucked weight=0.5574983187626092\u003cbr\u003eSHAP=0.904","None=7\u003cbr\u003eShell weight=0.16890881913303443\u003cbr\u003eShucked weight=0.19737726967047747\u003cbr\u003eSHAP=-0.499","None=8\u003cbr\u003eShell weight=0.44195316392625816\u003cbr\u003eShucked weight=0.31002017484868866\u003cbr\u003eSHAP=2.300","None=9\u003cbr\u003eShell weight=0.3572496263079223\u003cbr\u003eShucked weight=0.40181573638197715\u003cbr\u003eSHAP=0.408","None=10\u003cbr\u003eShell weight=0.13054309915296466\u003cbr\u003eShucked weight=0.18695359784801616\u003cbr\u003eSHAP=-0.666","None=11\u003cbr\u003eShell weight=0.3522670652715496\u003cbr\u003eShucked weight=0.1886348352387357\u003cbr\u003eSHAP=1.566","None=12\u003cbr\u003eShell weight=0.14798206278026907\u003cbr\u003eShucked weight=0.14828513786146605\u003cbr\u003eSHAP=-0.845","None=13\u003cbr\u003eShell weight=0.3971101145989039\u003cbr\u003eShucked weight=0.45090786819098855\u003cbr\u003eSHAP=1.005","None=14\u003cbr\u003eShell weight=0.4668659691081216\u003cbr\u003eShucked weight=0.46570275722932075\u003cbr\u003eSHAP=1.367","None=15\u003cbr\u003eShell weight=0.5465869456900848\u003cbr\u003eShucked weight=0.3043039677202421\u003cbr\u003eSHAP=2.663","None=16\u003cbr\u003eShell weight=0.08819133034379673\u003cbr\u003eShucked weight=0.08069939475453934\u003cbr\u003eSHAP=-0.883","None=17\u003cbr\u003eShell weight=0.09317389138016943\u003cbr\u003eShucked weight=0.08238063214525891\u003cbr\u003eSHAP=-0.821","None=18\u003cbr\u003eShell weight=0.23268560039860492\u003cbr\u003eShucked weight=0.07834566240753195\u003cbr\u003eSHAP=-0.177","None=19\u003cbr\u003eShell weight=0.07324364723467863\u003cbr\u003eShucked weight=0.05413584398117014\u003cbr\u003eSHAP=-0.750","None=20\u003cbr\u003eShell weight=0.11858495266567018\u003cbr\u003eShucked weight=0.11768661735036987\u003cbr\u003eSHAP=-0.616","None=21\u003cbr\u003eShell weight=0.1315396113602392\u003cbr\u003eShucked weight=0.18829858776059183\u003cbr\u003eSHAP=-0.940","None=22\u003cbr\u003eShell weight=0.10762331838565024\u003cbr\u003eShucked weight=0.10524546065904507\u003cbr\u003eSHAP=-0.710","None=23\u003cbr\u003eShell weight=0.23916292974588943\u003cbr\u003eShucked weight=0.35675857431069263\u003cbr\u003eSHAP=-0.197","None=24\u003cbr\u003eShell weight=0.8804185351270555\u003cbr\u003eShucked weight=0.5060524546065904\u003cbr\u003eSHAP=2.781","None=25\u003cbr\u003eShell weight=0.35027404085700053\u003cbr\u003eShucked weight=0.4455279085406859\u003cbr\u003eSHAP=0.520","None=26\u003cbr\u003eShell weight=0.35027404085700053\u003cbr\u003eShucked weight=0.4078681909885676\u003cbr\u003eSHAP=0.392","None=27\u003cbr\u003eShell weight=0.15794718485301448\u003cbr\u003eShucked weight=0.12441156691324814\u003cbr\u003eSHAP=-0.184","None=28\u003cbr\u003eShell weight=0.07125062282012956\u003cbr\u003eShucked weight=0.06321452589105582\u003cbr\u003eSHAP=-0.833","None=29\u003cbr\u003eShell weight=0.3223716990533134\u003cbr\u003eShucked weight=0.2962340282447882\u003cbr\u003eSHAP=0.766","None=30\u003cbr\u003eShell weight=0.3552566018933732\u003cbr\u003eShucked weight=0.42434431741761935\u003cbr\u003eSHAP=0.546","None=31\u003cbr\u003eShell weight=0.21425012456402595\u003cbr\u003eShucked weight=0.2074646940147949\u003cbr\u003eSHAP=-0.261","None=32\u003cbr\u003eShell weight=0.1280518186347783\u003cbr\u003eShucked weight=0.09078681909885677\u003cbr\u003eSHAP=-0.686","None=33\u003cbr\u003eShell weight=0.20926756352765324\u003cbr\u003eShucked weight=0.13550773369199734\u003cbr\u003eSHAP=-0.130","None=34\u003cbr\u003eShell weight=0.1180866965620329\u003cbr\u003eShucked weight=0.16139878950907868\u003cbr\u003eSHAP=-0.788","None=35\u003cbr\u003eShell weight=0.27254608868958646\u003cbr\u003eShucked weight=0.26227303295225285\u003cbr\u003eSHAP=0.209","None=36\u003cbr\u003eShell weight=0.1559541604384654\u003cbr\u003eShucked weight=0.11432414256893075\u003cbr\u003eSHAP=-0.330","None=37\u003cbr\u003eShell weight=0.3423019431988042\u003cbr\u003eShucked weight=0.37121721587088097\u003cbr\u003eSHAP=0.390","None=38\u003cbr\u003eShell weight=0.05231689088191331\u003cbr\u003eShucked weight=0.05245460659045057\u003cbr\u003eSHAP=-0.974","None=39\u003cbr\u003eShell weight=0.006975585450921775\u003cbr\u003eShucked weight=0.0057162071284465365\u003cbr\u003eSHAP=-0.932","None=40\u003cbr\u003eShell weight=0.22919780767314404\u003cbr\u003eShucked weight=0.2952252858103564\u003cbr\u003eSHAP=-0.381","None=41\u003cbr\u003eShell weight=0.10812157448928751\u003cbr\u003eShucked weight=0.1160053799596503\u003cbr\u003eSHAP=-0.619","None=42\u003cbr\u003eShell weight=0.29247633283507724\u003cbr\u003eShucked weight=0.22932078009414933\u003cbr\u003eSHAP=0.724","None=43\u003cbr\u003eShell weight=0.05979073243647235\u003cbr\u003eShucked weight=0.06624075319435105\u003cbr\u003eSHAP=-0.853","None=44\u003cbr\u003eShell weight=0.17488789237668165\u003cbr\u003eShucked weight=0.19401479488903833\u003cbr\u003eSHAP=-0.442","None=45\u003cbr\u003eShell weight=0.0852017937219731\u003cbr\u003eShucked weight=0.09213180901143243\u003cbr\u003eSHAP=-0.833","None=46\u003cbr\u003eShell weight=0.007972097658196314\u003cbr\u003eShucked weight=0.008406186953597848\u003cbr\u003eSHAP=-0.948","None=47\u003cbr\u003eShell weight=0.23268560039860492\u003cbr\u003eShucked weight=0.1304640215198386\u003cbr\u003eSHAP=-0.052","None=48\u003cbr\u003eShell weight=0.476831091180867\u003cbr\u003eShucked weight=0.6809011432414257\u003cbr\u003eSHAP=1.027","None=49\u003cbr\u003eShell weight=0.19780767314399605\u003cbr\u003eShucked weight=0.14290517821116341\u003cbr\u003eSHAP=0.061"],"x":[0.33233682112605883,0.046337817638266075,0.06826108619830595,0.21275535625311415,0.2914798206278027,0.06826108619830595,0.43697060288988543,0.16890881913303443,0.44195316392625816,0.3572496263079223,0.13054309915296466,0.3522670652715496,0.14798206278026907,0.3971101145989039,0.4668659691081216,0.5465869456900848,0.08819133034379673,0.09317389138016943,0.23268560039860492,0.07324364723467863,0.11858495266567018,0.1315396113602392,0.10762331838565024,0.23916292974588943,0.8804185351270555,0.35027404085700053,0.35027404085700053,0.15794718485301448,0.07125062282012956,0.3223716990533134,0.3552566018933732,0.21425012456402595,0.1280518186347783,0.20926756352765324,0.1180866965620329,0.27254608868958646,0.1559541604384654,0.3423019431988042,0.05231689088191331,0.006975585450921775,0.22919780767314404,0.10812157448928751,0.29247633283507724,0.05979073243647235,0.17488789237668165,0.0852017937219731,0.007972097658196314,0.23268560039860492,0.476831091180867,0.19780767314399605],"y":[1.070387224543008,-0.9080968254030807,-0.770005654583291,-0.23476607926007054,0.2732186194596377,-0.7088022530046723,0.9041496000113369,-0.49897024812372137,2.3000317396173156,0.40763813973733143,-0.6658412089502861,1.56589100933682,-0.8445061536223,1.0050459519536075,1.3668366735346726,2.662726804210425,-0.8832367133301653,-0.82087982318734,-0.17746976015705673,-0.7495519527208442,-0.6158289351143593,-0.9397980017379529,-0.7101592285502731,-0.19693686660971804,2.780826295942794,0.5195314424114222,0.39206901462160226,-0.18361161906689483,-0.8328300007315228,0.7656044543817646,0.5464324799262004,-0.2610169916407183,-0.686121055889191,-0.1303150038277383,-0.7883644996407939,0.20884667057050055,-0.3302180287122498,0.3904508425870268,-0.9744295516496289,-0.9319754922401655,-0.3810401154712937,-0.6189168142463886,0.7241319617056119,-0.8528073762364046,-0.44243885063936705,-0.8327858635416976,-0.9481086157942302,-0.05175653256708834,1.0265931523070977,0.06117403939234123],"type":"scattergl"}],                        {"hovermode":"closest","paper_bgcolor":"#fff","plot_bgcolor":"#fff","showlegend":false,"title":{"text":"Dependence plot for Shell weight"},"xaxis":{"title":{"text":"Shell weight"}},"yaxis":{"title":{"text":"SHAP value"}},"template":{"data":{"scatter":[{"type":"scatter"}]}},"margin":{"t":40,"b":40,"l":40,"r":40}},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+        
+</div> 
+    
+    </div>
+  </div>
+</div>
+
+</div>
+        
+</div> 
+    
+</div>
+        
+</div> 
+    
+    </div>
+</div>
+    
+</div>
+
+</div>
+<script type="text/javascript">
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
+    tabTrigger.show()
+    window.dispatchEvent(new Event('resize'));
+  })
+})
+</script>
+
+</div>
+
+</body>
+
+<script type="text/javascript">
+window.dispatchEvent(new Event('resize'));
+</script>
+        
+</html>
+    

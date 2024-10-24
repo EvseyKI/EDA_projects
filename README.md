@@ -1,3 +1,3 @@
 # EDA_projects
 
-The task description will be here
+Разведочный анализ датасета с физическими измерениями моллюсков + модели.
